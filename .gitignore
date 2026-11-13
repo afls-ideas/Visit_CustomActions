@@ -1,0 +1,7 @@
+.cursor/
+.sfdx/
+.sf/
+node_modules/
+# retrieved-for-inspection only, not part of the solution
+force-app/main/default/layouts/
+force-app/main/default/quickActions/Account.*

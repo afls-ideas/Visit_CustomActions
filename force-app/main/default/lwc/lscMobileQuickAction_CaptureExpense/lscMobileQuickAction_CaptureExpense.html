@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-p-around_medium">
+        <div class="slds-box slds-box_xx-small slds-theme_shade slds-m-bottom_small">
+            Launched from: <b>{contextObject}</b> &mdash; Record Id: <b>{contextRecordId}</b>
+        </div>
+        <template lwc:if={errorMessage}>
+            <div class="slds-text-color_error slds-m-bottom_small" role="alert">{errorMessage}</div>
+        </template>
+        <lightning-input label="Title" name="title" value={title} onchange={handleChange}></lightning-input>
+        <lightning-input type="number" label="Amount" name="amount" step="0.01" required
+            value={amount} onchange={handleChange}></lightning-input>
+        <lightning-input type="date" label="Transaction Date" name="transactionDate" required
+            value={transactionDate} onchange={handleChange}></lightning-input>
+        <lightning-combobox label="Expense Type" name="expenseType" options={typeOptions}
+            value={expenseType} onchange={handleChange}></lightning-combobox>
+        <lightning-textarea label="Description" name="description" value={description}
+            onchange={handleChange}></lightning-textarea>
+        <div class="slds-m-top_medium slds-grid slds-grid_align-end">
+            <lightning-button label="Cancel" onclick={handleCancel} class="slds-m-right_small"></lightning-button>
+            <lightning-button variant="brand" label="Save" onclick={handleSave} disabled={isSaving}></lightning-button>
+        </div>
+    </div>
+</template>
