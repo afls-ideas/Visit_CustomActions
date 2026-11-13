@@ -4,6 +4,8 @@ Two custom actions on the **Visit** screen of the Life Sciences Cloud iPad app t
 pre-filled **Expense** or **Task** create form for the current Visit. This avoids sending reps
 to related lists.
 
+![Capture Task custom action on a Visit, running on iPad](docs/visit-create-task-custom-action.gif)
+
 Tested on iPad against org `262-lsdo-july` (Summer '26 package 262), Visit record type `LSDO_PH_Visit`,
 profile `LS PH Field Sales Representative`. Metadata API version 68.0.
 
